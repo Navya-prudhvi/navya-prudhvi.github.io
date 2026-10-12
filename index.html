@@ -15,6 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Ramaraja&display=swap">
 <style>
+/* Losta Masta Medium (same licensed file as Winod's site), subset to basic Latin; used for the couple's names */
+@font-face{font-family:"Losta Masta";src:url("assets/fonts/LostaMasta-Medium.woff2?v=1") format("woff2");font-weight:500;font-style:normal;font-display:swap}
 /* Layout: one invitation card on kumkum silk, read top to bottom like a folded South Indian patrika. Single committed look, light paper on red. */
 :root{
   --silk:#7a1418;
@@ -28,7 +30,8 @@
   --gold-bright:#e3c072;
   --lotus:#a8285c;
   --leaf:#4d6a2a;
-  --script:"Great Vibes",cursive; /* names only */
+  --script:"Great Vibes",cursive; /* kids line and accents */
+  --names:"Losta Masta","Playfair Display",Georgia,serif; /* the couple's names */
   --display:"Playfair Display",Georgia,serif; /* headings and numbers */
   --serif:"EB Garamond",Georgia,"Times New Roman",serif;
   --label:"Cinzel",Georgia,serif;
@@ -105,8 +108,8 @@ p{margin:0}
 .names{padding-top:72px}
 .story{font-style:italic;font-size:21px;line-height:1.55;color:var(--ink-soft);max-width:30ch;margin:0 auto}
 .couple-names{margin-top:30px;display:grid;gap:0}
-.dr{font-family:var(--display);font-style:italic;font-weight:500;font-size:.34em;letter-spacing:.02em;color:var(--gold-text);margin-right:.2em;vertical-align:baseline}
-.nm{font-family:var(--script);font-size:62px;line-height:1.1;color:var(--silk);text-wrap:balance}
+.dr{font-family:var(--display);font-style:italic;font-weight:500;font-size:.42em;letter-spacing:.02em;color:var(--gold-text);margin-right:.25em;vertical-align:baseline}
+.nm{font-family:var(--names);font-weight:500;font-size:44px;line-height:1.15;color:var(--silk);text-wrap:balance}
 .amp{font-family:var(--display);font-style:italic;font-size:30px;color:var(--gold);line-height:1;margin:6px 0 10px}
 .engaged{font-family:var(--label);font-weight:600;font-size:15px;letter-spacing:.2em;margin-top:18px;color:var(--ink)}
 .mandala-bg{position:absolute;left:50%;top:50%;width:min(470px,108%);max-width:none;transform:translate(-50%,-50%);opacity:.2;
@@ -171,7 +174,7 @@ p{margin:0}
 .sig .rule::before{background:linear-gradient(90deg,transparent,var(--gold-bright))}
 .sig .rule::after{background:linear-gradient(90deg,transparent,var(--gold-bright))}
 .sig .rule span{border-color:var(--gold-bright)}
-.sig__names{font-family:var(--script);font-size:52px;line-height:1.15;color:#fbeccb;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+.sig__names{font-family:var(--names);font-weight:500;font-size:34px;line-height:1.15;color:#fbeccb;text-shadow:0 2px 14px rgba(0,0,0,.35)}
 .sig__names span{font-family:var(--display);font-style:italic;font-size:.5em;color:var(--gold-bright);margin:0 .15em}
 .sig__date{font-family:var(--label);font-weight:600;font-size:12px;letter-spacing:.36em;margin:4px -.36em 0 0;color:var(--gold-bright)}
 
@@ -190,7 +193,7 @@ p{margin:0}
 .gate__head,.gate__foot{position:relative;z-index:4;transition:opacity .6s ease,transform .8s ease}
 .gate .eyebrow{color:var(--gold-bright);font-size:10.5px;letter-spacing:.16em;text-wrap:balance;max-width:26em;margin-inline:auto}
 .gate__names{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;column-gap:.3em;font-family:var(--script);font-weight:400;font-size:clamp(34px,9.6vw,50px);line-height:1.1;color:#fbeccb;margin:6px 0 0;text-shadow:0 2px 14px rgba(0,0,0,.4)}
-.gate__names b{font-weight:400;white-space:nowrap}
+.gate__names b{font-family:var(--names);font-weight:500;font-size:.78em;white-space:nowrap}
 .gate__names span{font-family:var(--display);font-style:italic;font-size:.5em;color:var(--gold-bright)}
 @media (max-width:560px){ .gate__names{flex-direction:column;align-items:center} .gate__names span{line-height:1.3} }
 .gate__date{font-family:var(--label);font-weight:600;font-size:12px;letter-spacing:.36em;color:var(--gold-bright);margin:8px -.36em 0 0}
@@ -341,7 +344,7 @@ html.gate-lock .music{visibility:hidden}
   .telugu{font-size:18px}
   .hero-banana{width:150px;left:-76px;top:310px}
   .hero-lotus{width:96px;top:-46px;right:-22px}
-  .nm{font-size:50px}
+  .nm{font-size:38px}
   .venue .gopuram{width:160px;left:-60px}
   .venue .banana{width:150px;right:-60px}
 }
